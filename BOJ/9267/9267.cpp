@@ -42,8 +42,7 @@ int main() {
         cout << "NO";
     else {
         lld x = 1;
-        while ((S - a*x) % b)
-            x++;
+        while ((S - a*x) % b) x++;
         lld y = (S - a*x) / b;
         while (y > 0) {
             if (gcd(x, y) == 1) {
