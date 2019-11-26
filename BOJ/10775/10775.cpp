@@ -31,11 +31,9 @@ int main() {
     Y.push_back(min(W[0], (int)V[W[0]].size()));
 
     for (int i = 1; i < W.size(); i++) {
-        //cout << "k: " << W[i]-W[i-1] << ' ' <<  V[W[i]].size() << endl;1
+        //cout << "k: " << W[i]-W[i-1] << ' ' <<  V[W[i]].size() << endl;
         Y.push_back(Y[i-1] + min(W[i]-W[i-1], (int)V[W[i]].size()));
     }
-    
-    //sort(W.begin(), W.end());
 
     if (W[0] < V[W[0]].size()) X.push_back(V[W[0]][W[0]]);
     for (int i = 1; i < W.size(); i++) {
